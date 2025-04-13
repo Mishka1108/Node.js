@@ -19,7 +19,7 @@ app.listen(PORT, () => {
 
 // Configure CORS - this must be before other middleware and routes
 app.use(cors({
-  origin: 'http://localhost:4200', // Your Angular app's URL
+  origin: 'https://symphonious-basbousa-323430.netlify.app/', // Your Angular app's URL
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
