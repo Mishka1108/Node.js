@@ -137,7 +137,7 @@ router.get('/users/verified', async (req, res) => {
 // Get unverified users
 router.get('/users/unverified', async (req, res) => {
   try {
-    const unverifiedUsers = await User.find({ isVerified: false }).select('-password');
+    const unverifiedUsers = await User.find({ isVerified: false });
     res.status(200).json(unverifiedUsers);
   } catch (err) {
     console.error(err);
