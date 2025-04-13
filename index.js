@@ -19,7 +19,7 @@ app.listen(PORT, () => {
 
 // Configure CORS - this must be before other middleware and routes
 app.use(cors({
-  origin: 'https://visionary-buttercream-955c10.netlify.app/', // Your Angular app's URL
+  origin: 'https://visionary-buttercream-955c10.netlify.app', // Your Angular app's URL
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
