@@ -7,6 +7,10 @@ const authRoutes = require('./routes/auth');
 dotenv.config();
 
 const app = express();
+const PORT = process.env.PORT || 10000;
+app.listen(PORT, () => {
+  console.log(`🚀 Server running at http://localhost:${PORT}`);
+});
 
 // Configure CORS - this must be before other middleware and routes
 app.use(cors({
