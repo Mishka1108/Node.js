@@ -115,7 +115,7 @@ router.get('/unverified-users', async (req, res) => {
 // Get all users
 router.get('/users', async (req, res) => {
   try {
-    const users = await User.find().select('-password'); // პაროლის გარეშე
+    const users = await User.find(); // პაროლის გარეშე
     res.status(200).json(users);
   } catch (err) {
     console.error(err);
@@ -126,7 +126,7 @@ router.get('/users', async (req, res) => {
 // Get verified users
 router.get('/users/verified', async (req, res) => {
   try {
-    const verifiedUsers = await User.find({ isVerified: true }).select('-password');
+    const verifiedUsers = await User.find({ isVerified: true });
     res.status(200).json(verifiedUsers);
   } catch (err) {
     console.error(err);
