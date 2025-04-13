@@ -19,7 +19,7 @@ app.listen(PORT, () => {
 
 // Configure CORS - this must be before other middleware and routes
 app.use(cors({
-  origin: 'https://symphonious-basbousa-323430.netlify.app/', // Your Angular app's URL
+  origin: 'https://visionary-buttercream-955c10.netlify.app/', // Your Angular app's URL
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
@@ -35,8 +35,6 @@ mongoose.connect(process.env.MONGO_URI, {
 })
 .then(() => {
   console.log('✅ MongoDB connected');
-  app.listen(process.env.PORT, () => {
-    console.log(`🚀 Server running at http://localhost:${process.env.PORT}`);
-  });
+ 
 })
 .catch((err) => console.error('❌ MongoDB error:', err.message));
